@@ -1,9 +1,9 @@
 // src/App.jsx
-import { Routes, Route } from 'react-router-dom';  // Importa Routes y Route
+import { Routes, Route } from 'react-router-dom'; 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';  // Página de inicio
-import Cart from './components/Cart';  // Componente de carrito
+import HomePage from './pages/HomePage'; 
+import Cart from './components/Cart';  
 
 function App() {
   return (
