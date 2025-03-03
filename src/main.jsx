@@ -1,14 +1,16 @@
-// src/main.jsx
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';  // Importa BrowserRouter
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
+import { CartProvider } from './context/CartContext'; // Importa el contexto del carrito
+import { BrowserRouter } from 'react-router-dom'; // Importa React Router
+import './index.css';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter> {/* Envuelve App en BrowserRouter */}
-      <App />
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter> {/* ✅ Envolver dentro de BrowserRouter */}
+      <CartProvider> {/* ✅ El contexto envuelve toda la app */}
+        <App />
+      </CartProvider>
     </BrowserRouter>
-  </StrictMode>,
+  </React.StrictMode>
 );

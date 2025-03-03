@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage'; 
-import Cart from './components/Cart';  
+import OtherPage from './pages/OtherPage';  
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} /> {/* Ruta de la página principal */}
-        <Route path="/add-character" element={<Cart />} /> {/* Ruta para el carrito */}
+        <Route path="/add-character" element={<OtherPage />} /> {/* Ruta para el carrito */}
       </Routes>
       <Footer />
     </div>
